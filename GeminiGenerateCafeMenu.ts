@@ -9,10 +9,12 @@ const cafeMenu = {
     type: "object",
     properties: {
       name: {
-        type: "string"
+        type: "string",
+        description: "Name of the Cafe Item"
       },
       category: {
-        type: "string"
+        type: "string",
+        description: 'Category under which the Item Falls? Available Caetgories are:["Coffee","Tea","Iced Beverages","Pastries","Smoothies","Juices",]'
       },
       size_options: {
         type: "array",
@@ -20,10 +22,12 @@ const cafeMenu = {
           type: "object",
           properties: {
             size: {
-              type: "string"
+              type: "string",
+              description: 'Size of the cafe Item'
             },
             price: {
-              type: "number"
+              type: "number",
+              description: 'Price of the cafe Item for its corresponding size'
             }
           },
           required: [
@@ -36,22 +40,26 @@ const cafeMenu = {
         type: "array",
         items: {
           type: "string"
-        }
+        },
+        description:'What are all the diary options available for this cafe Item. These are options available: ["Oat Milk", "Almond Milk", "2% Milk", "Whole Milk", "Non-Dairy"]'
       },
       tags: {
         type: "array",
         items: {
           type: "string"
-        }
+        },
+        description:'Tags for cafe Items. Available tags:["vegan", "gluten-free", "caffeinated", "popular", "seasonal"]'
       },
       description: {
-        type: "string"
+        type: "string",
+        description:"Desciption about the cafe Item"
       },
       form_options: {
         type: "array",
         items: {
           type: "string"
-        }
+        },
+        description:'Diffent form factors of the cafe Item. Available forms:["Hot", "Cold", "Frozen"]'
       }
     },
     required: [
